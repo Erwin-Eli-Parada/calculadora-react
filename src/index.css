@@ -1,13 +1,132 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&family=VT323&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #6cec66,#528cf0);
+}
+
+#calculadora{
+    background-color:  #e1dfdf;
+    display:flex;
+    flex-direction: column;
+    height: 425px;
+    width: 406px;
+    padding: 10px;
+    border-radius: 10px;
+    gap:10px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#display{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-family: 'VT323', monospace;
+    font-size: 35px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0px 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#botones{
+    display:grid;
+    grid-template-areas:
+        "ac ac diving multi"
+        "seven eight nine subs"
+        "four five six plus"
+        "one two three eq"
+        "zero zero dota eq"
+    ;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:9px;
+    grid-auto-rows: minmax(65px, auto);
+}
+
+button{
+    border-radius: 5px;
+    border:none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    font-family: Kelly Slab;
+}
+
+#clear{
+    grid-area: ac;
+}
+
+#divide{
+    grid-area: diving;
+}
+
+#multiply{
+    grid-area: multi;
+}
+
+#seven{
+    grid-area: seven;
+}
+
+#eight{
+    grid-area: eight;
+}
+
+#nine{
+    grid-area: nine;
+}
+
+#subtract{
+    grid-area: subs;
+}
+
+#four{
+    grid-area: four;
+}
+
+#five{
+    grid-area: five;
+}
+
+#six{
+    grid-area: six;
+}
+
+#add{
+    grid-area: plus;
+}
+
+#one{
+    grid-area: one;
+}
+
+#two{
+    grid-area: two;
+}
+
+#three{
+    grid-area: three;
+}
+
+#equals{
+    grid-area: eq;
+}
+
+#zero{
+    grid-area: zero;
+}
+
+#decimal{
+    grid-area: dota;
 }
